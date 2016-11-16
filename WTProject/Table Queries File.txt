@@ -1,0 +1,79 @@
+CREATE TABLE feedback(name VARCHAR(30));
+
+ALTER TABLE feedback
+ADD COLUMN email VARCHAR(50) PRIMARY KEY AFTER name;
+ALTER TABLE feedback
+ADD COLUMN subject VARCHAR(100),
+ADD COLUMN message VARCHAR(500);
+
+
+
+
+
+
+CREATE TABLE registration(source VARCHAR(30));
+
+ALTER TABLE registration
+ADD COLUMN destination VARCHAR(50)AFTER source,
+ADD COLUMN numofdays INT(10),
+ADD COLUMN date VARCHAR(10),
+ADD COLUMN time VARCHAR(8),
+ADD COLUMN regnum BIGINT AUTO_INCREMENT;
+
+ALTER TABLE registration
+ADD COLUMN email VARCHAR(50),
+ADD COLUMN carid VARCHAR(50);
+
+ALTER TABLE registration 
+ADD CONSTRAINT primkey
+PRIMARY KEY (email,carid);
+ 
+
+
+
+
+
+CREATE TABLE  signup(firstname VARCHAR(50));
+
+ALTER TABLE signup
+ADD COLUMN lastname VARCHAR(30) AFTER firstname,
+ADD COLUMN contact VARCHAR(50),
+ADD COLUMN address VARCHAR(500),
+ADD COLUMN email VARCHAR(50) PRIMARY KEY,
+ADD COLUMN password VARCHAR(100);
+
+
+
+
+
+CREATE TABLE  car(carid VARCHAR(50)  PRIMARY KEY);
+
+ALTER TABLE car
+ADD COLUMN type VARCHAR(500),
+ADD COLUMN brand VARCHAR(50),
+ADD COLUMN model VARCHAR(30),
+ADD COLUMN count BIGINT(30);
+
+
+
+
+
+CREATE TABLE  employee(email VARCHAR(50)  PRIMARY KEY);
+
+ALTER TABLE employee
+ADD COLUMN name VARCHAR(50),
+ADD COLUMN password VARCHAR(50),
+ADD COLUMN contact VARCHAR(50),
+ADD COLUMN designation VARCHAR(50);
+
+
+
+
+
+
+ 
+ALTER TABLE registration
+ADD FOREIGN KEY email_reg(email) REFERENCES signup(email);
+
+ALTER TABLE registration
+ADD FOREIGN KEY carid_reg(carid) REFERENCES  car(carid);

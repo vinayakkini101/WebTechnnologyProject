@@ -1,0 +1,38 @@
+How to  automate MySQL database backups in Windows:
+
+1. Create a batch file (ending in .bat ) containing this-
+
+	@ECHO OFF
+
+	set TIMESTAMP=%DATE:~10,4%%DATE:~4,2%%DATE:~7,2%
+
+	"C:\path-to\mysql\bin\mysqldump.exe" --databases database-name1 --result-file="C:\path-to\backup\databases.%TIMESTAMP%.sql" --user=username --password=password
+
+	C:
+	CD \path-to\backup\
+
+	MAKECAB "databases.%TIMESTAMP%.sql" "databases.%TIMESTAMP%.sql.cab"
+	DEL /q /f "databases.%TIMESTAMP%.sql"
+
+
+   Note: Don't forget to change the "path-to" (according to the location of files in your PC) in the above commands
+
+
+
+2. Create a Task to run this batch file periodically
+
+	Use Task Scheduler (in-built in Windows) to do this.
+	
+		a. Open Task Scheduler
+		b. Right click on Task Scheduler Library on the left pane
+		c. Click on Create Task
+		d. Fill in all the tabs (General, Triggers, Action, Conditions, Settings). 
+		   Here the most important tab is the Action tab, where you'll choose the batch file you created in Step 1.
+		e. Now to view your created task, click on Task Scheduler Library.
+
+
+
+
+Tips:  To edit batch files you can use Notepad or Notepad++
+       Ensure the MySQL service is running in the Services tab of Task Manager
+       
