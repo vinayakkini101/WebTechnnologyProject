@@ -1,0 +1,111 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
+
+body, html{
+	 font-family: 'Roboto', sans-serif; 
+	 }
+
+/* LOGO*/
+#logo {
+	width: 90px;
+	height: 70px; }
+
+/*Navbar*/
+ .navbar-nav{
+ 	padding-top: 10px; }
+
+ .navbar-nav > li > a{
+ 	background-color: orange;
+ }
+.navbar-default{
+	background-color:black; }
+
+/*Breadcrumb*/
+.breadcrumb>li+li:before{
+	content: none; }
+
+/*Footer*/
+.col-xs-4 h4{
+	padding-top: 12px; }
+
+.col-xs-4>ul{
+list-style:none;
+position:relative;
+left:-40px; }
+
+/*register page */
+.container-fluid >h2{
+	text-shadow:2px 2px;
+	text-align:center; 
+	padding-bottom: 25px;
+	margin-bottom: 20px;
+}
+.form-group label{
+	line-height: 28px;
+    font-weight: 300;
+    color: #3CBC8D;
+     }
+
+.form-control{
+	width: 40%;
+}
+#register{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.col-form-label{
+	padding-left: 10px;
+	margin-left: 20px;
+	width: 15%;
+}
+input[type=text]:focus{
+	border: 3px solid #555;
+}
+input[type=time]:focus{
+	border: 3px solid #555;
+}
+input[type=date]:focus{
+	border: 3px solid #555;
+}
+input[type=number]:focus{
+	border: 3px solid #555;
+}
+.button {
+  display: inline-block;
+  border-radius: 9px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 9px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 12px;
+  vertical-align:middle;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.6s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

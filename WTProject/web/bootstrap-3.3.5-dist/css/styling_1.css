@@ -1,0 +1,172 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
+
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body, html{
+	 font-family: 'Roboto', sans-serif; 
+	 }
+
+/* LOGO*/
+#logo {
+	width: 90px;
+	height: 70px; }
+
+/*Navbar*/
+ .navbar-nav{
+ 	padding: 10px; }
+
+.navbar-default{
+	background-color:orange; 
+  padding : 8px 0;
+  margin-bottom: 0px;
+  border-bottom: 0px;
+  }
+
+#header {
+  margin-top: 0px;
+  border-top: 0px;
+  padding-top: 0px;
+  }
+
+/*Breadcrumb*/
+.breadcrumb>li+li:before{
+	content: none; }
+
+/* steps */
+#stp{
+  width: 280px;
+  height: 250px;
+}
+
+/*feedback form*/
+#feedback{
+   background-color:#fed;
+   margin:0;
+   padding:0;
+}
+#feedback h2, #feedback h4{
+  color:red;
+}
+form {
+  max-width: 600px;
+  text-align: center;
+  margin: 20px auto;
+}
+form input, form textarea {
+  border: 5px;
+  outline: 0;
+  padding: 1em;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  font-family: 'Merriweather', sans-serif;
+  -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
+
+input:focus , textarea:focus{
+  -moz-box-shadow: 0 0px 2px #e74c3c !important;
+  -webkit-box-shadow: 0 0px 2px #e74c3c !important;
+  box-shadow: 0 0px 2px #e74c3c !important;
+}
+
+#input-submit {
+  color:white;
+  background: #e74c3c;
+  cursor: pointer;
+}
+
+textarea {
+  height: 126px;
+}
+.half{
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+/*Footer*/
+#footer{
+  color:#FFD700;
+  background-color: black;
+}
+.col-xs-4 h4{
+	padding-top: 12px; }
+
+.col-xs-4>ul{
+list-style:none;
+position:relative;
+left:-40px; }
+
+/*Video */
+
+.embed-responsive{
+  height:800px;
+  margin:0;
+  padding:0
+}
+
+video{
+  position: absolute;
+  z-index: 2;
+  background-size:cover;
+  top: 2px;
+  left: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.overlay figcaption{
+  position: absolute;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    /**text, adjust as req'd**/
+    padding-top: 15%;
+    padding-left: 5%;
+    color: #FFF;
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 200;
+    text-align: center;
+    font-size: 20px; /**some fallback value**/
+    font-size: 5.4vw; /**responsive size**/
+}
+
+
+.glyphicon-menu-down{
+display: block;
+}
+
+.typewriter h3 {
+  overflow: hidden;
+  top: 100px;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .12em;
+  animation: 
+      typing 6.0s steps(40,end),
+      blink-caret .75s step-end infinite;
+}
+/* typing effect */
+@keyframes typing {
+    from {width: 0} 
+    to {width: 40%}
+}
+/*The typewriter cursor effect*/
+@keyframes blink-caret{
+  from, to {border-color: transparent}
+  50% {border-color: orange;}
+}

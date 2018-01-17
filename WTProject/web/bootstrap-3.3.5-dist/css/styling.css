@@ -1,0 +1,242 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
+
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body, html{
+	 font-family: 'Roboto', sans-serif; 
+         -webkit-tap-highlight-color: rgba(0,0,0,0);
+	 }
+
+/* LOGO*/
+#logo {
+	width: 90px;
+	height: 70px; }
+
+/*Breadcrumb*/
+.breadcrumb>li+li:before{
+	content: none; }
+
+/* steps */
+#stp{
+  width: 280px;
+  height: 250px;
+}
+
+/*feedback form*/
+#feedback{
+   background-color:#fed;
+   margin:0;
+   padding:0;
+}
+#feedback h2, #feedback h4{
+  color:red;
+}
+form {
+  max-width: 600px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+input:focus , textarea:focus{
+  -moz-box-shadow: 0 0px 2px #e74c3c !important;
+  -webkit-box-shadow: 0 0px 2px #e74c3c !important;
+  box-shadow: 0 0px 2px #e74c3c !important;
+}
+
+#input-submit {
+  color:white;
+  background: #e74c3c;
+  cursor: pointer;
+}
+
+textarea {
+  height: 126px;
+}
+.half{
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+/*Footer*/
+#footer{
+  color:#FFD700;
+  background-color: black;
+}
+.col-xs-4 h4{
+	padding-top: 12px; }
+
+.col-xs-4>ul{
+list-style:none;
+position:relative;
+left:-40px; }
+
+/*Video */
+
+.embed-responsive{
+  height:800px;
+  margin:0;
+  padding:0
+}
+
+video{
+  position: absolute;
+  z-index: 2;
+  background-size:cover;
+  top: 2px;
+  left: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.overlay figcaption{
+  position: absolute;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    /**text, adjust as req'd**/
+    padding-top: 15%;
+    padding-left: 5%;
+    color: #FFF;
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 200;
+    text-align: center;
+    font-size: 20px; /**some fallback value**/
+    font-size: 5.4vw; /**responsive size**/
+}
+
+
+.glyphicon-menu-down{
+display: block;
+}
+
+.typewriter h3 {
+  overflow: hidden;
+  top: 100px;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .12em;
+  animation: 
+      typing 6.0s steps(40,end),
+      blink-caret .75s step-end infinite;
+}
+/* typing effect */
+@keyframes typing {
+    from {width: 0} 
+    to {width: 40%}
+}
+/*The typewriter cursor effect*/
+@keyframes blink-caret{
+  from, to {border-color: transparent}
+  50% {border-color: orange;}
+}
+
+a {
+	color: #f4d03f;
+	-webkit-transition: all ease .2s;
+	-moz-transition: all ease .2s;
+	-o-transition: all ease .2s;
+	transition: all ease .2s;
+}
+a:hover {
+	color: #f4d03f;
+	text-decoration: underline;
+}
+@media only screen and (max-width: 767px) {
+a.submenu {
+	display: block;
+}
+.menuBar {
+	padding: 10px 0px 10px 0px;
+	float: none;
+	max-height: 350px;
+	overflow: auto;
+	width: 100%;
+	display: none;
+}
+.menuBar ul {
+	padding: 0px;
+	margin: 0px;
+}
+.menuBar li {
+	margin: 0px;
+	float: none;
+	text-align: center;
+	display: block;
+}
+.menuBar li:before {
+	content: '';
+}
+.menuBar li a {
+	padding: 7px 0px;
+	outline: 0px;
+	display: block;
+}
+.menuBar li ul {
+	position: static;
+	left: 0px;
+	top: 0px;
+	opacity: 1;
+	visibility: visible;
+	display: none;
+	height: auto;
+	background: none;
+}
+.menuBar li li {
+	border: 0px;
+}
+.menuBar li.dropdown:hover. .menuBar li.dropdown.active {
+border-bottom: #F4D03F solid 0px;
+}
+.menuBar li.current {
+	border-bottom: #F4D03F solid 2px;
+}
+.slider {
+	overflow: hidden;
+	max-width: 100%;
+}
+.main__middle__container {
+	overflow: hidden;
+	max-width: 100%;
+}
+footer {
+	overflow: hidden;
+	max-width: 100%;
+}
+.carousel-caption {
+	display: none;
+}
+h1 {
+	font-size: 24px;
+	line-height: normal;
+}
+h2.page__title {
+	font-size: 24px;
+	line-height: normal;
+}
+.homepage {
+	margin-top: 65%;
+}
+.carousel-control span {
+	margin-top: -40px;
+}
+h3 {
+	font-size: 24px;
+	line-height: normal;
+}
+#portfolio ul#Grid a.link span {
+	font-size: 11px;
+	line-height: 15px;
+}
+#portfolio ul.controls li {
+	padding: 5px 10px;
+}
+}
